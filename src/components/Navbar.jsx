@@ -25,7 +25,7 @@ const Navbar = () => {
             Login
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             className="hover:underline"
             to="/main"
@@ -34,7 +34,7 @@ const Navbar = () => {
           >
             Main
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             className="hover:underline"

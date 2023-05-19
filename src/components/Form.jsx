@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import house from "./assets/house.png";
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 
 function Form() {
   const [partnerOption, setPartnerOption] = useState("");
@@ -21,9 +21,9 @@ function Form() {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <div
-        className="flex justify-center h-screen"
+        className="flex justify-center items-center h-screen"
         style={{
           backgroundImage: `url(${house})`,
           backgroundSize: "cover",
@@ -31,10 +31,10 @@ function Form() {
         }}
       >
         <div className="container mx-auto">
-          <h1 className="text-2xl font-bold mb-4">MASH Game</h1>
+          <h1 className="text-2xl font-bold mb-4 text-center">MASH Game</h1>
           <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
             {/* Left Column */}
-            <div>
+            <div className="text-center">
               <div className="mb-4">
                 <label htmlFor="mansion" className="block mb-2 font-bold">
                   Love interest:
@@ -74,7 +74,7 @@ function Form() {
             </div>
 
             {/* Right Column */}
-            <div>
+            <div className="text-center">
               <div className="mb-4">
                 <label htmlFor="house" className="block mb-2 font-bold">
                   Transportation:
@@ -113,12 +113,14 @@ function Form() {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-2 py-1 rounded-md"
-            >
-              Submit
-            </button>
+            <div className="col-span-2 flex justify-center">
+              <button
+                type="submit"
+                className="bg-[#F70753] text-white px-2 py-1 rounded-md col-span-2"
+              >
+                Submit
+              </button>
+            </div>
           </form>
 
           {result && (
