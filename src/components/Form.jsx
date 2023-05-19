@@ -31,12 +31,12 @@ function Form() {
         }}
       >
         <div className="container mx-auto">
-          <h1 className="text-2xl font-bold mb-4 text-center">MASH Game</h1>
+          <h1 className="text-4xl font-bold mb-4 text-center">MASH Game</h1>
           <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
             {/* Left Column */}
             <div className="text-center">
               <div className="mb-4">
-                <label htmlFor="mansion" className="block mb-2 font-bold">
+                <label htmlFor="mansion" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
                   Love interest:
                 </label>
                 <input
@@ -48,7 +48,7 @@ function Form() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="apartment" className="block mb-2 font-bold">
+                <label htmlFor="apartment" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
                   Amount of kids:
                 </label>
                 <input
@@ -60,7 +60,7 @@ function Form() {
                 />
               </div>
               <div>
-                <label htmlFor="shack" className="block mb-2 font-bold">
+                <label htmlFor="shack" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
                   Career choice:
                 </label>
                 <input
@@ -76,7 +76,7 @@ function Form() {
             {/* Right Column */}
             <div className="text-center">
               <div className="mb-4">
-                <label htmlFor="house" className="block mb-2 font-bold">
+                <label htmlFor="house" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
                   Transportation:
                 </label>
                 <input
@@ -88,7 +88,7 @@ function Form() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="house" className="block mb-2 font-bold">
+                <label htmlFor="house" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
                   Salary:
                 </label>
                 <input
@@ -100,7 +100,7 @@ function Form() {
                 />
               </div>
               <div>
-                <label htmlFor="house" className="block mb-2 font-bold">
+                <label htmlFor="house" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
                   Death:
                 </label>
                 <input
@@ -124,7 +124,7 @@ function Form() {
           </form>
 
           {result && (
-            <div className="mt-4">
+            <div className="mt-4 p-3 rounded-md bg-white">
               <h2 className="text-lg font-bold mb-2">Result:</h2>
               <p>{result}</p>
             </div>
