@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import house from "./assets/house.png";
+import house from "./assets/mashHouse.png";
 import Navbar from "./Navbar";
 
 function Form() {
@@ -36,36 +36,45 @@ function Form() {
             {/* Left Column */}
             <div className="text-center">
               <div className="mb-4">
-                <label htmlFor="mansion" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
+                <label
+                  htmlFor="mansion"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
                   Love interest:
                 </label>
                 <input
                   type="text"
-                  id="mansion"
+                  id="partner"
                   value={partnerOption}
                   onChange={(e) => setPartnerOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-2"
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="apartment" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
+                <label
+                  htmlFor="apartment"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
                   Amount of kids:
                 </label>
                 <input
                   type="text"
-                  id="apartment"
+                  id="kids"
                   value={kidsOption}
                   onChange={(e) => setKidsOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-2"
                 />
               </div>
               <div>
-                <label htmlFor="shack" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
+                <label
+                  htmlFor="shack"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
                   Career choice:
                 </label>
                 <input
                   type="text"
-                  id="shack"
+                  id="career"
                   value={careerOption}
                   onChange={(e) => setCareerOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-2"
@@ -76,36 +85,45 @@ function Form() {
             {/* Right Column */}
             <div className="text-center">
               <div className="mb-4">
-                <label htmlFor="house" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
+                <label
+                  htmlFor="house"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
                   Transportation:
                 </label>
                 <input
                   type="text"
-                  id="house"
+                  id="transportation"
                   value={carOption}
                   onChange={(e) => setCarOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-2"
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="house" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
+                <label
+                  htmlFor="house"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
                   Salary:
                 </label>
                 <input
                   type="int"
-                  id="house"
+                  id="salary"
                   value={salaryOption}
                   onChange={(e) => setSalaryOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-2"
                 />
               </div>
               <div>
-                <label htmlFor="house" className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full">
+                <label
+                  htmlFor="house"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
                   Death:
                 </label>
                 <input
                   type="text"
-                  id="house"
+                  id="death"
                   value={deathOption}
                   onChange={(e) => setDeathOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-2"
