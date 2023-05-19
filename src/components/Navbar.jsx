@@ -25,6 +25,26 @@ const Navbar = () => {
             Login
           </Link>
         </li>
+        <li>
+          <Link
+            className="hover:underline"
+            to="/main"
+            smooth={true}
+            duration={500}
+          >
+            Main
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="hover:underline"
+            to="/form"
+            smooth={true}
+            duration={500}
+          >
+            Form
+          </Link>
+        </li>
       </ul>
       <div onClick={handleClick} className="md:hidden z-10">
         {!nav ? <FaBars /> : <FaTimes />}
