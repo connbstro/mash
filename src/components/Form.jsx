@@ -33,8 +33,6 @@ function Form() {
   const [deathOption3, setDeathOption3] = useState("");
   // Result useState
   const [result, setResult] = useState("");
-  const [result2, setResult2] = useState("");
-  const [result3, setResult3] = useState("");
 
   const partners = ["John", "Lisa", "Michael", "Sarah", "Brooke", "Jess"];
   const kids = ["0", "1", "2", "3", "5", "10"];
