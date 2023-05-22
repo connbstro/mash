@@ -8,22 +8,38 @@ function Form() {
   const [careerOption, setCareerOption] = useState("");
   const [carOption, setCarOption] = useState("");
   const [salaryOption, setSalaryOption] = useState("");
+  const [deathAgeOption, setDeathAgeOption] = useState("");
   const [deathOption, setDeathOption] = useState("");
   const [result, setResult] = useState("");
 
-  const partners = ["Brooke", "Lisa", "Michael", "Sarah", "Carl", "Jess"];
+  const partners = ["John", "Lisa", "Michael", "Sarah", "Brooke", "Jess"];
   const kids = ["0", "1", "2", "3", "5", "10"];
   const careers = [
     "Engineer",
     "Teacher",
     "Doctor",
     "Artist",
-    "Janitor",
     "Developer",
+    "Lawyer",
   ];
-  const cars = ["Sedan", "SUV", "Sports Car", "Truck", "Lambo", "bike"];
-  const salaries = ["$50,000", "$80,000", "$100,000", "$150,000"];
-  const deaths = ["Old Age", "Accident", "Disease", "Natural Causes", "Hotdog"];
+  const cars = ["Sedan", "SUV", "Sports Car", "Truck", "Bike", "Lambo"];
+  const salaries = [
+    "$50,000",
+    "$80,000",
+    "$100,000",
+    "$150,000",
+    "$0",
+    "$1,000,000",
+  ];
+  const deathAges = ["70", "80", "90", "100", "25", "40", "50"];
+  const deaths = [
+    "Old Age",
+    "Accident",
+    "Disease",
+    "Natural Causes",
+    "Skydiving",
+    "Hotdog",
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,10 +56,12 @@ function Form() {
       carOption || cars[Math.floor(Math.random() * cars.length)];
     const selectedSalary =
       salaryOption || salaries[Math.floor(Math.random() * salaries.length)];
+    const selectedDeathAge =
+      deathAgeOption || deathAges[Math.floor(Math.random() * deathAges.length)];
     const selectedDeath =
       deathOption || deaths[Math.floor(Math.random() * deaths.length)];
 
-    const resultText = `You will marry ${selectedPartner} and have ${selectedKids} kids together. You will work as a ${selectedCareer} for a living, make ${selectedSalary} a year, and drive a ${selectedCar}. You will die by ${selectedDeath}.`;
+    const resultText = `You will marry ${selectedPartner} and have ${selectedKids} kids together. You will work as a ${selectedCareer} for a living, make ${selectedSalary} a year, and drive a ${selectedCar}. You will die at the age of ${selectedDeathAge} by ${selectedDeath}.`;
     setResult(resultText);
   };
 
@@ -61,9 +79,9 @@ function Form() {
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-center">MASH Game</h1>
           <p className="text-center text-xl text-red-500">
-            Click submit for a random outcome or input your own answers!
+            Click Submit for a random result or input your own answers
           </p>
-          <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="grid grid-cols-3 gap-4">
             {/* Left Column */}
             <div className="text-center">
               <div className="mb-4">
@@ -96,7 +114,7 @@ function Form() {
                   className="border border-gray-300 rounded-md p-1"
                 />
               </div>
-              <div>
+              <div className="mb-4">
                 <label
                   htmlFor="career"
                   className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
@@ -111,6 +129,26 @@ function Form() {
                   className="border border-gray-300 rounded-md p-1"
                 />
               </div>
+            </div>
+
+            {/* Middle Column */}
+            <div className="text-center">
+              <div className="mb-4">
+                <label
+                  htmlFor="deathAge"
+                  className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
+                >
+                  Death age:
+                </label>
+                <input
+                  type="text"
+                  id="deathAge"
+                  value={deathAgeOption}
+                  onChange={(e) => setDeathAgeOption(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+              </div>
+              {/* ... */}
             </div>
 
             {/* Right Column */}
@@ -138,7 +176,7 @@ function Form() {
                   Salary:
                 </label>
                 <input
-                  type="int"
+                  type="text"
                   id="salary"
                   value={salaryOption}
                   onChange={(e) => setSalaryOption(e.target.value)}
@@ -150,7 +188,7 @@ function Form() {
                   htmlFor="death"
                   className="block mb-2 font-bold text-2xl text-black bg-opacity-50 rounded-full"
                 >
-                  Death:
+                  Cause of death:
                 </label>
                 <input
                   type="text"
@@ -161,11 +199,10 @@ function Form() {
                 />
               </div>
             </div>
-
-            <div className="col-span-2 flex justify-center">
+            <div className="col-span-3 flex justify-center">
               <button
                 type="submit"
-                className="bg-[#F70753] text-white px-8 py-2 rounded-md col-span-2"
+                className="bg-[#F70753] text-white px-8 py-2 rounded-md"
               >
                 Submit
               </button>
