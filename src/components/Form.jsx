@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 
 function Form() {
   const [partnerOption, setPartnerOption] = useState("");
+  const [partnerOption2, setPartnerOption2] = useState("");
   const [kidsOption, setKidsOption] = useState("");
   const [careerOption, setCareerOption] = useState("");
   const [carOption, setCarOption] = useState("");
@@ -43,11 +44,19 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform any necessary actions with the selected options
-    // Calculate the result based on the selected options
 
-    const selectedPartner =
-      partnerOption || partners[Math.floor(Math.random() * partners.length)];
+    let selectedPartner;
+    if (partnerOption && partnerOption2) {
+      // Randomly pick one of the two assigned values
+      const randomIndex = Math.random() < 0.5 ? 0 : 1;
+      selectedPartner = [partnerOption, partnerOption2][randomIndex];
+    } else {
+      // If either of the fields is empty, select the non-empty value or choose a random value
+      selectedPartner =
+        partnerOption ||
+        partnerOption2 ||
+        partners[Math.floor(Math.random() * partners.length)];
+    }
     const selectedKids =
       kidsOption || kids[Math.floor(Math.random() * kids.length)];
     const selectedCareer =
@@ -96,6 +105,14 @@ function Form() {
                   id="partner"
                   value={partnerOption}
                   onChange={(e) => setPartnerOption(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="partner2"
+                  value={partnerOption2}
+                  onChange={(e) => setPartnerOption2(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
               </div>
