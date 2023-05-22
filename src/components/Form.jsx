@@ -3,14 +3,35 @@ import house from "./assets/mashHouse.png";
 import Navbar from "./Navbar";
 
 function Form() {
+  // Partner useState
   const [partnerOption, setPartnerOption] = useState("");
   const [partnerOption2, setPartnerOption2] = useState("");
+  const [partnerOption3, setPartnerOption3] = useState("");
+  // Kids useState
   const [kidsOption, setKidsOption] = useState("");
+  const [kidsOption2, setKidsOption2] = useState("");
+  const [kidsOption3, setKidsOption3] = useState("");
+  // Career useState
   const [careerOption, setCareerOption] = useState("");
+  const [careerOption2, setCareerOption2] = useState("");
+  const [careerOption3, setCareerOption3] = useState("");
+  // Transportation useState
   const [carOption, setCarOption] = useState("");
+  const [carOption2, setCarOption2] = useState("");
+  const [carOption3, setCarOption3] = useState("");
+  // Salary useState
   const [salaryOption, setSalaryOption] = useState("");
+  const [salaryOption2, setSalaryOption2] = useState("");
+  const [salaryOption3, setSalaryOption3] = useState("");
+  // Death Age useState
   const [deathAgeOption, setDeathAgeOption] = useState("");
+  const [deathAgeOption2, setDeathAgeOption2] = useState("");
+  const [deathAgeOption3, setDeathAgeOption3] = useState("");
+  // Death useState
   const [deathOption, setDeathOption] = useState("");
+  const [deathOption2, setDeathOption2] = useState("");
+  const [deathOption3, setDeathOption3] = useState("");
+  // Result useState
   const [result, setResult] = useState("");
 
   const partners = ["John", "Lisa", "Michael", "Sarah", "Brooke", "Jess"];
@@ -46,29 +67,98 @@ function Form() {
     e.preventDefault();
 
     let selectedPartner;
-    if (partnerOption && partnerOption2) {
-      // Randomly pick one of the two assigned values
-      const randomIndex = Math.random() < 0.5 ? 0 : 1;
-      selectedPartner = [partnerOption, partnerOption2][randomIndex];
+    if (partnerOption && partnerOption2 && partnerOption3) {
+      // Randomly pick one of the three assigned values
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedPartner = [partnerOption, partnerOption2, partnerOption3][
+        randomIndex
+      ];
     } else {
-      // If either of the fields is empty, select the non-empty value or choose a random value
+      // If any of the fields is empty, select the non-empty value or choose a random value
       selectedPartner =
         partnerOption ||
         partnerOption2 ||
+        partnerOption3 ||
         partners[Math.floor(Math.random() * partners.length)];
     }
-    const selectedKids =
-      kidsOption || kids[Math.floor(Math.random() * kids.length)];
-    const selectedCareer =
-      careerOption || careers[Math.floor(Math.random() * careers.length)];
-    const selectedCar =
-      carOption || cars[Math.floor(Math.random() * cars.length)];
-    const selectedSalary =
-      salaryOption || salaries[Math.floor(Math.random() * salaries.length)];
-    const selectedDeathAge =
-      deathAgeOption || deathAges[Math.floor(Math.random() * deathAges.length)];
-    const selectedDeath =
-      deathOption || deaths[Math.floor(Math.random() * deaths.length)];
+
+    let selectedKids;
+    if (kidsOption && kidsOption2 && kidsOption3) {
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedKids = [kidsOption, kidsOption2, kidsOption3][randomIndex];
+    } else {
+      selectedKids =
+        kidsOption ||
+        kidsOption2 ||
+        kidsOption3 ||
+        kids[Math.floor(Math.random() * kids.length)];
+    }
+
+    let selectedCareer;
+    if (careerOption && careerOption2 && careerOption3) {
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedCareer = [careerOption, careerOption2, careerOption3][
+        randomIndex
+      ];
+    } else {
+      selectedCareer =
+        careerOption ||
+        careerOption2 ||
+        careerOption3 ||
+        careers[Math.floor(Math.random() * careers.length)];
+    }
+
+    let selectedCar;
+    if (carOption && carOption2 && carOption3) {
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedCar = [carOption, carOption2, carOption3][randomIndex];
+    } else {
+      selectedCar =
+        carOption ||
+        carOption2 ||
+        carOption3 ||
+        cars[Math.floor(Math.random() * cars.length)];
+    }
+
+    let selectedSalary;
+    if (salaryOption && salaryOption2 && salaryOption3) {
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedSalary = [salaryOption, salaryOption2, salaryOption3][
+        randomIndex
+      ];
+    } else {
+      selectedSalary =
+        salaryOption ||
+        salaryOption2 ||
+        salaryOption3 ||
+        salaries[Math.floor(Math.random() * salaries.length)];
+    }
+
+    let selectedDeathAge;
+    if (deathAgeOption && deathAgeOption2 && deathAgeOption3) {
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedDeathAge = [deathAgeOption, deathAgeOption2, deathAgeOption3][
+        randomIndex
+      ];
+    } else {
+      selectedDeathAge =
+        deathAgeOption ||
+        deathAgeOption2 ||
+        deathAgeOption3 ||
+        deathAges[Math.floor(Math.random() * deathAges.length)];
+    }
+
+    let selectedDeath;
+    if (deathOption && deathOption2 && deathOption3) {
+      const randomIndex = Math.floor(Math.random() * 3);
+      selectedDeath = [deathOption, deathOption2, deathOption3][randomIndex];
+    } else {
+      selectedDeath =
+        deathOption ||
+        deathOption2 ||
+        deathOption3 ||
+        deaths[Math.floor(Math.random() * deaths.length)];
+    }
 
     const resultText = `You will marry ${selectedPartner} and have ${selectedKids} kids together. You will work as a ${selectedCareer} for a living, make ${selectedSalary} a year, and drive a ${selectedCar}. You will die at the age of ${selectedDeathAge} by ${selectedDeath}.`;
     setResult(resultText);
@@ -115,6 +205,14 @@ function Form() {
                   onChange={(e) => setPartnerOption2(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
+                <br />
+                <input
+                  type="text"
+                  id="partner3"
+                  value={partnerOption3}
+                  onChange={(e) => setPartnerOption3(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
               </div>
               <div className="mb-4">
                 <label
@@ -130,6 +228,22 @@ function Form() {
                   onChange={(e) => setKidsOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
+                <br />
+                <input
+                  type="text"
+                  id="kids2"
+                  value={kidsOption2}
+                  onChange={(e) => setKidsOption2(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="kids3"
+                  value={kidsOption3}
+                  onChange={(e) => setKidsOption3(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
               </div>
               <div className="mb-4">
                 <label
@@ -143,6 +257,22 @@ function Form() {
                   id="career"
                   value={careerOption}
                   onChange={(e) => setCareerOption(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="career2"
+                  value={careerOption2}
+                  onChange={(e) => setCareerOption2(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="career3"
+                  value={careerOption3}
+                  onChange={(e) => setCareerOption3(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
               </div>
@@ -162,6 +292,22 @@ function Form() {
                   id="deathAge"
                   value={deathAgeOption}
                   onChange={(e) => setDeathAgeOption(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="deathAge2"
+                  value={deathAgeOption2}
+                  onChange={(e) => setDeathAgeOption2(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="deathAge3"
+                  value={deathAgeOption3}
+                  onChange={(e) => setDeathAgeOption3(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
               </div>
@@ -184,6 +330,22 @@ function Form() {
                   onChange={(e) => setCarOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
+                <br />
+                <input
+                  type="text"
+                  id="transportation2"
+                  value={carOption2}
+                  onChange={(e) => setCarOption2(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="transportation3"
+                  value={carOption3}
+                  onChange={(e) => setCarOption3(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
               </div>
               <div className="mb-4">
                 <label
@@ -199,6 +361,22 @@ function Form() {
                   onChange={(e) => setSalaryOption(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
+                <br />
+                <input
+                  type="text"
+                  id="salary2"
+                  value={salaryOption2}
+                  onChange={(e) => setSalaryOption2(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="salary3"
+                  value={salaryOption3}
+                  onChange={(e) => setSalaryOption3(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
               </div>
               <div>
                 <label
@@ -212,6 +390,22 @@ function Form() {
                   id="death"
                   value={deathOption}
                   onChange={(e) => setDeathOption(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="death2"
+                  value={deathOption2}
+                  onChange={(e) => setDeathOption2(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1"
+                />
+                <br />
+                <input
+                  type="text"
+                  id="death3"
+                  value={deathOption3}
+                  onChange={(e) => setDeathOption3(e.target.value)}
                   className="border border-gray-300 rounded-md p-1"
                 />
               </div>
