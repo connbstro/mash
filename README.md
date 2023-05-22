@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# MASH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Available Scripts
+## **Description:**
 
-In the project directory, you can run:
+## **Webpage**
 
-### `npm start`
+  <img width="1509" alt="Screenshot 2023-05-22 at 4 19 59 PM" src="https://github.com/connbstro/mash/assets/117555071/356621d6-8ac4-4f54-aee9-bbb2ee769467">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <br/>
 
-### `npm test`
+## **Table of Contents**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <details>
+  <summary>Click to expand contents</summary>
 
-### `npm run build`
+### [Build](#Build)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### [Description](#Description)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### [Installation](#Installation)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### [Usage](#Usage)
 
-### `npm run eject`
+### [Contributors](#Contributors)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### [Tests](#Tests)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### [Questions](#Questions)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### [License](#License)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  </details>
 
-## Learn More
+  <br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Build**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+JavaScript, Node.js
 
-### Code Splitting
+  <br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## **Installation**
 
-### Analyzing the Bundle Size
+Git clone the “README-professoinal-generator” and then use “npm install inquirer”
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  <br/>
+  
+  ## **Usage**
+  After installation is complete, run the application in your command-line by typing "node index" after navigating to the correct folder and hitting enter. Begin to answer the prompts/questions and the generated "README.md" file will appear in the root of your folder.
+  
+  <br/>
+  
+  ## **Contributors**
+  "inquirer.js" npm package: https://www.npmjs.com/package/inquirer
 
-### Making a Progressive Web App
+  <br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## **Tests**
 
-### Advanced Configuration
+To test this app, open up the file in VS Code. Open the terminal, change directory into the root folder "README-professional-generator" and run "node index.js". Answer the prompts/questions and then view the preview of the newly generated README.md file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  <br/>
 
-### Deployment
+## **Questions**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+How to reach me with questions or comments:
 
-### `npm run build` fails to minify
+[My GitHub Profile](https://github.com/connbstro)&nbsp; 📂 &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;constroh@gmail.com&nbsp;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  <br/>
+
+## **License**
+
+License: https://choosealicense.com/licenses/mit
