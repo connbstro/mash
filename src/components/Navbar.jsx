@@ -25,16 +25,6 @@ const Navbar = () => {
             Login
           </Link>
         </li>
-        {/* <li>
-          <Link
-            className="hover:underline"
-            to="/main"
-            smooth={true}
-            duration={500}
-          >
-            Main
-          </Link>
-        </li> */}
         <li>
           <Link
             className="hover:underline"
